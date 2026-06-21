@@ -479,11 +479,11 @@ input:focus {
   width: 7px;
   height: 7px;
   border-radius: 999px;
-  background: var(--purple);
+  background: var(--success);
 }
 
 .category-dot.movie {
-  background: var(--success);
+  background: var(--purple);
 }
 
 .record-actions {
