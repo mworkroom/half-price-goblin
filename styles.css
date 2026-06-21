@@ -64,9 +64,6 @@ button {
   max-height: 112px;
   object-fit: contain;
   object-position: left center;
-  background: rgba(255, 255, 255, 0.56);
-  border: 1px solid rgba(227, 220, 233, 0.7);
-  border-radius: 8px;
 }
 
 .month-line {
@@ -179,7 +176,7 @@ button {
   width: 0;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, var(--goblin), var(--purple));
+  background: linear-gradient(90deg, #c9a3d5, var(--purple));
   transition: width 180ms ease;
 }
 
@@ -262,8 +259,8 @@ h2 {
   min-width: 48px;
   min-height: 28px;
   border-radius: 999px;
-  background: var(--goblin);
-  color: #3e590d;
+  background: rgba(205, 235, 115, 0.34);
+  color: #486615;
   font-weight: 900;
 }
 
