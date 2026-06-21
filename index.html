@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#F3F0F6" />
+    <title>Half-Price Goblin</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="app-header">
+        <img class="brand-logo" src="assets/half-price-goblin-logo.png" alt="Half-Price Goblin" />
+        <div class="month-line">
+          <span id="currentMonthLabel">이번 달</span>
+          <span id="saveStatus" aria-live="polite"></span>
+        </div>
+      </header>
+
+      <main>
+        <section class="summary-grid" id="summaryGrid" aria-label="카드별 이번 달 한도"></section>
+
+        <section class="entry-panel" aria-labelledby="entryTitle">
+          <div class="section-heading">
+            <h1 id="entryTitle">빠른 기록</h1>
+            <span class="rate-pill">50%</span>
+          </div>
+
+          <form id="entryForm" autocomplete="off">
+            <fieldset>
+              <legend>카드</legend>
+              <div class="segmented" data-group="card">
+                <button type="button" class="segment is-active" data-card="me">J 카드</button>
+                <button type="button" class="segment" data-card="mom">H 카드</button>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>대상</legend>
+              <div class="segmented" data-group="category">
+                <button type="button" class="segment is-active" data-category="coffee">커피</button>
+                <button type="button" class="segment" data-category="movie">영화</button>
+              </div>
+            </fieldset>
+
+            <div class="form-row two-columns">
+              <label>
+                <span>날짜</span>
+                <input id="dateInput" type="date" required />
+              </label>
+              <label>
+                <span>결제금액</span>
+                <input
+                  id="amountInput"
+                  type="number"
+                  min="1"
+                  step="1"
+                  inputmode="numeric"
+                  placeholder="0"
+                  required
+                />
+              </label>
+            </div>
+
+            <div class="discount-preview">
+              <span>할인액</span>
+              <strong id="discountPreview">0원</strong>
+            </div>
+
+            <div class="limit-preview" id="limitPreview"></div>
+
+            <button class="primary-button" type="submit">기록 추가</button>
+          </form>
+        </section>
+
+        <section class="history-section" aria-labelledby="historyTitle">
+          <div class="section-heading">
+            <h2 id="historyTitle">최근 3개월</h2>
+          </div>
+          <div class="history-list" id="historyList"></div>
+        </section>
+
+        <section class="manage-section" aria-labelledby="manageTitle">
+          <details>
+            <summary id="manageTitle">관리</summary>
+            <div class="manage-actions">
+              <button class="secondary-button" type="button" id="exportButton">백업 내보내기</button>
+              <label class="secondary-button file-button">
+                백업 가져오기
+                <input id="importInput" type="file" accept="application/json,.json" />
+              </label>
+              <button class="danger-button" type="button" id="resetButton">전체 초기화</button>
+            </div>
+          </details>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "Half-Price Goblin",
+  "short_name": "HP Goblin",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#F3F0F6",
+  "theme_color": "#8E4AA0",
+  "description": "카드별 월 30,000원 할인 한도 기록 앱",
+  "icons": [
+    {
+      "src": "assets/half-price-goblin-logo.png",
+      "sizes": "512x128",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
