@@ -266,7 +266,7 @@ function renderSummary() {
             <span class="progress-track" aria-hidden="true">
               <span class="progress-bar" style="width: ${remainingPercent}%"></span>
             </span>
-            <span class="toggle-hint">${isExpanded ? "내역 접기" : "내역 보기"}</span>
+            
           </button>
           ${isExpanded ? renderCardRecords(card.id) : ""}
         </article>
