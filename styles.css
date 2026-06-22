@@ -7,8 +7,8 @@
   --purple-dark: #321f45;
   --text: #2f2933;
   --muted: #766d7b;
-  --goblin: #cdeb73;
-  --success: #74a52f;
+  --goblin: #a58ab3;
+  --success: #8e4aa0;
   --warning: #b95d2d;
   --danger: #ad3f65;
   --shadow: 0 16px 36px rgba(55, 38, 74, 0.08);
@@ -129,8 +129,8 @@ button {
   min-height: 26px;
   padding: 3px 9px;
   border-radius: 999px;
-  background: rgba(205, 235, 115, 0.34);
-  color: #486615;
+  background: rgba(142, 74, 160, 0.12);
+  color: #6f3f82;
   font-size: 0.78rem;
   font-weight: 800;
   white-space: nowrap;
@@ -149,10 +149,14 @@ button {
   margin-top: 12px;
 }
 
-.used-money {
+.available-money {
   font-size: 1.45rem;
   font-weight: 900;
   color: var(--purple-dark);
+}
+
+.available-money.is-over {
+  color: var(--warning);
 }
 
 .limit-money {
@@ -220,7 +224,7 @@ button {
   justify-content: space-between;
   gap: 10px;
   min-height: 38px;
-  padding-top: 2px;
+  padding-top: 8px;
   border-top: 1px solid var(--line);
 }
 
@@ -259,8 +263,8 @@ h2 {
   min-width: 48px;
   min-height: 28px;
   border-radius: 999px;
-  background: rgba(205, 235, 115, 0.34);
-  color: #486615;
+  background: rgba(142, 74, 160, 0.12);
+  color: #6f3f82;
   font-weight: 900;
 }
 
@@ -349,7 +353,7 @@ input:focus {
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 10px 12px;
-  background: #f8fbef;
+  background: #f7f2fa;
 }
 
 .discount-preview span,
@@ -362,7 +366,7 @@ input:focus {
 .discount-preview strong,
 .limit-preview strong {
   font-size: 1.2rem;
-  color: #4f7016;
+  color: var(--purple-dark);
 }
 
 .limit-preview.is-over {
@@ -404,11 +408,12 @@ input:focus {
 
 .ghost-button {
   min-height: 34px;
-  padding: 0 10px;
+  padding: 6px 10px;
   border: 1px solid var(--line);
   background: var(--panel-soft);
   color: var(--muted);
   font-size: 0.82rem;
+  line-height: 1;
 }
 
 .ghost-button.is-active {
@@ -479,7 +484,7 @@ input:focus {
   width: 7px;
   height: 7px;
   border-radius: 999px;
-  background: var(--success);
+  background: var(--goblin);
 }
 
 .category-dot.movie {
@@ -535,7 +540,7 @@ input:focus {
 
 .mini-row {
   display: grid;
-  grid-template-columns: 58px minmax(0, 1fr) 42px;
+  grid-template-columns: 24px minmax(0, 1fr) 42px;
   gap: 8px;
   align-items: center;
   min-height: 22px;
@@ -547,17 +552,11 @@ input:focus {
   font-weight: 800;
 }
 
-.mini-track {
-  height: 8px;
-  overflow: hidden;
-  border-radius: 999px;
-  background: #eee8f2;
-}
-
-.mini-bar {
-  height: 100%;
-  border-radius: inherit;
-  background: var(--purple);
+.mini-used-frame {
+  color: var(--text);
+  font-weight: 800;
+  white-space: nowrap;
+  text-align: right;
 }
 
 .mini-percent {
@@ -611,7 +610,7 @@ summary {
     padding-inline: 10px;
   }
 
-  .used-money {
+  .available-money {
     font-size: 1.28rem;
   }
 
