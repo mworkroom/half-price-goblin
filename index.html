@@ -6,7 +6,8 @@
     <meta name="theme-color" content="#F3F0F6" />
     <title>라온 착즙기</title>
     <link rel="manifest" href="manifest.json" />
-    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="assets/raon-extractor-home-icon.png" />
+    <link rel="icon" type="image/png" href="assets/raon-extractor-home-icon.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -86,7 +87,7 @@
               <button class="secondary-button" type="button" id="exportButton">백업 내보내기</button>
               <label class="secondary-button file-button">
                 백업 가져오기
-                <input id="importInput" type="file" accept="application/json,.json" />
+                <input id="importInput" type="file" accept=".json,application/json,text/json" aria-label="백업 파일 선택" />
               </label>
               <button class="danger-button" type="button" id="resetButton">전체 초기화</button>
             </div>
@@ -95,6 +96,6 @@
       </main>
     </div>
 
-    <script src="app.js" defer></script>
+    <script src="app.js?v=20260629-2" defer></script>
   </body>
 </html>

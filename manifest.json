@@ -8,7 +8,7 @@
   "description": "카드별 월 30,000원 할인 한도 기록 앱",
   "icons": [
     {
-      "src": "assets/apple-touch-icon.png",
+      "src": "assets/raon-extractor-home-icon.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

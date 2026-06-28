@@ -600,9 +600,21 @@ summary {
   margin-top: 12px;
 }
 
-.file-button input {
-  display: none;
+.file-button {
+  position: relative;
+  overflow: hidden;
 }
+
+.file-button input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  font-size: 100px;
+}
+
 
 @media (min-width: 640px) {
   .app-shell {
