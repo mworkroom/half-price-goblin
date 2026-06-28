@@ -40,7 +40,9 @@ init();
 
 function init() {
   els.dateInput.value = todayInputValue();
-  els.currentMonthLabel.textContent = monthLabel(currentMonthKey());
+  if (els.currentMonthLabel) {
+    els.currentMonthLabel.textContent = monthLabel(currentMonthKey());
+  }
   bindEvents();
   render();
 }
