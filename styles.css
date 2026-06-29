@@ -80,7 +80,7 @@ button {
 
 .brand-title {
   color: var(--purple-dark);
-  font-size: clamp(1.25rem, 4.7vw, 1.85rem);
+  font-size: 1.45rem;
   font-weight: 900;
   letter-spacing: -0.04em;
   white-space: nowrap;
